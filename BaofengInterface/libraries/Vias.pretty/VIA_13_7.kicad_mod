@@ -1,0 +1,11 @@
+(module VIA_13_7 (layer F.Cu) (tedit 592BA0EA)
+  (descr "Via, 13mm hole, 7mm annular ring")
+  (tags via)
+  (fp_text reference REF** (at 0 2.5) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value VIA_13_7 (at 0 -2.5) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 thru_hole circle (at 0 0) (size 0.6858 0.6858) (drill 0.3302) (layers *.Cu))
+)
