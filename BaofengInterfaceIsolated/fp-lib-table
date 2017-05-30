@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name SJ1-352XN)(type KiCad)(uri "$(KIPRJMOD)/libraries/SJ1-352XN.pretty")(options "")(descr "TRS Audio Jack"))
+  (lib (name Vias)(type KiCad)(uri "$(KIPRJMOD)/libraries/Vias.pretty")(options "")(descr "Vias for stitching"))
+  (lib (name BournesTransformer)(type KiCad)(uri "$(KIPRJMOD)/libraries/BournesTransformer.pretty")(options "")(descr "Bournes Transformers"))
+)

@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name SJ1-352XN)(type KiCad)(uri "$(KIPRJMOD)/libraries/SJ1-352XN.pretty")(options "")(descr ""))
   (lib (name Vias)(type KiCad)(uri "$(KIPRJMOD)/libraries/Vias.pretty")(options "")(descr ""))
+  (lib (name BournesTransformer)(type KiCad)(uri "$(KIPRJMOD)Isolated/libraries/BournesTransformer.pretty")(options "")(descr ""))
 )

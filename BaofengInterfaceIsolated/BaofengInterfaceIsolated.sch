@@ -1,0 +1,396 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:audiojack
+LIBS:BaofengInterfaceIsolated-cache
+EELAYER 25 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Baofeng Isolated Audio Interface"
+Date "2017-05-28"
+Rev "v0.1"
+Comp "AG6GR"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X06 J1
+U 1 1 592B3AFF
+P 3050 2750
+F 0 "J1" H 3050 3100 50  0000 C CNN
+F 1 "CONN_01X06" V 3150 2750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 3050 2750 50  0001 C CNN
+F 3 "" H 3050 2750 50  0001 C CNN
+	1    3050 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 5100 6700 5100
+Wire Wire Line
+	3250 3000 3300 3000
+Wire Wire Line
+	3300 3000 3300 3050
+Wire Wire Line
+	7700 2800 7600 2800
+$Comp
+L +5V #PWR01
+U 1 1 592B4469
+P 3300 2450
+F 0 "#PWR01" H 3300 2300 50  0001 C CNN
+F 1 "+5V" H 3300 2590 50  0000 C CNN
+F 2 "" H 3300 2450 50  0001 C CNN
+F 3 "" H 3300 2450 50  0001 C CNN
+	1    3300 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2500 3300 2450
+Text GLabel 6550 4600 0    60   Input ~ 0
+TX_RIGHT+
+Text GLabel 8300 2700 2    60   Input ~ 0
+SERIAL_TX
+Text GLabel 8300 2800 2    60   Input ~ 0
+SERIAL_RX
+Text GLabel 4550 3850 0    60   Input ~ 0
+RX_AUDIO
+Text GLabel 5200 3400 2    60   Input ~ 0
+SERIAL_TX
+Text GLabel 5250 2400 2    60   Input ~ 0
+SERIAL_RX
+Text GLabel 3400 2600 2    60   Input ~ 0
+TX_AUDIO+
+Wire Wire Line
+	3250 2600 3400 2600
+Wire Wire Line
+	6700 4050 6800 4050
+Text GLabel 3350 2800 2    60   Input ~ 0
+RX_AUDIO
+Wire Wire Line
+	3250 2800 3350 2800
+$Comp
+L R R1
+U 1 1 592B4D29
+P 5600 2700
+F 0 "R1" V 5680 2700 50  0000 C CNN
+F 1 "100" V 5600 2700 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5530 2700 50  0001 C CNN
+F 3 "" H 5600 2700 50  0001 C CNN
+F 4 "Stackpole Electronics Inc." V 5600 2700 60  0001 C CNN "MFN"
+F 5 "MFRPN" V 5600 2700 60  0001 C CNN "CF14JT1K00"
+F 6 "CF14JT1K00CT-ND" V 5600 2700 60  0001 C CNN "Supplier1_PN"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT1K00/CF14JT1K00CT-ND/1830350" V 5600 2700 60  0001 C CNN "Supplier1_Link"
+	1    5600 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3250 2700 4700 2700
+Wire Wire Line
+	4550 3850 4700 3850
+Text GLabel 8300 2900 2    60   Input ~ 0
+PTT_B
+Text GLabel 5900 2700 2    60   Input ~ 0
+PTT_B
+Wire Wire Line
+	6550 4600 6550 4700
+Connection ~ 6550 4700
+Wire Wire Line
+	6000 4900 6800 4900
+Wire Wire Line
+	6550 5000 6550 4900
+Connection ~ 6550 4900
+$Comp
+L JACK_TRS_3PINS J3
+U 1 1 592B7129
+P 7250 4850
+F 0 "J3" H 7250 5100 50  0000 C CNN
+F 1 "JACK_TRS_3PINS" H 7250 4550 50  0000 C CNN
+F 2 "SJ1-352XN:SJ1-352XN" H 7400 5000 50  0001 C CNN
+F 3 "" H 7400 5000 50  0001 C CNN
+F 4 "CUI Inc." H 7250 4850 60  0001 C CNN "MFN"
+F 5 "SJ1-3523N" H 7250 4850 60  0001 C CNN "MFRPN"
+F 6 "CP1-3523N-ND" H 7250 4850 60  0001 C CNN "Supplier1_PN"
+F 7 "https://www.digikey.com/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 7250 4850 60  0001 C CNN "Supplier1_Link"
+	1    7250 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4150 5500 4150
+Wire Wire Line
+	6800 4700 6800 4800
+Wire Wire Line
+	6700 5100 6700 5000
+Wire Wire Line
+	6700 5000 6800 5000
+$Comp
+L JACK_TRS_3PINS J4
+U 1 1 592B786B
+P 7250 4000
+F 0 "J4" H 7250 4250 50  0000 C CNN
+F 1 "JACK_TRS_3PINS" H 7250 3700 50  0000 C CNN
+F 2 "SJ1-352XN:SJ1-352XN" H 7400 4150 50  0001 C CNN
+F 3 "" H 7400 4150 50  0001 C CNN
+F 4 "CUI Inc." H 7250 4000 60  0001 C CNN "MFN"
+F 5 "SJ1-3523N" H 7250 4000 60  0001 C CNN "MFRPN"
+F 6 "CP1-3523N-ND" H 7250 4000 60  0001 C CNN "Supplier1_PN"
+F 7 "https://www.digikey.com/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 7250 4000 60  0001 C CNN "Supplier1_Link"
+	1    7250 4000
+	-1   0    0    -1  
+$EndComp
+Text GLabel 6550 5000 0    60   Input ~ 0
+TX_LEFT+
+Wire Wire Line
+	6000 4700 6800 4700
+$Comp
+L CONN_01X03 J5
+U 1 1 592B87E2
+P 5800 4800
+F 0 "J5" H 5800 5000 50  0000 C CNN
+F 1 "CONN_01X03" V 5900 4800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 5800 4800 50  0001 C CNN
+F 3 "" H 5800 4800 50  0001 C CNN
+	1    5800 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transformer_1P_1S_SO8 T1
+U 1 1 592C849A
+P 5000 4050
+F 0 "T1" H 5000 4300 50  0000 C CNN
+F 1 "LM-NP-1001-B1L" H 5000 3750 50  0000 C CNN
+F 2 "BournesTransformer:LM-LP-1001L" H 5000 4050 50  0001 C CNN
+F 3 "" H 5000 4050 50  0001 C CNN
+F 4 "Bourns" H 5000 4050 60  0001 C CNN "MFR"
+F 5 "LM-NP-1001-B1L" H 5000 4050 60  0001 C CNN "MFRPN"
+F 6 "Mouser" H 5000 4050 60  0001 C CNN "Supplier1"
+F 7 "652-LM-NP-1001-B1L" H 5000 4050 60  0001 C CNN "Supplier1_PN"
+F 8 "http://www.mouser.com/ProductDetail/Bourns/LM-NP-1001-B1L/?qs=sGAEpiMZZMv0IfuNuy2LUf9TOZZJ2UPZu6zAveLP08Q%3d" H 5000 4050 60  0001 C CNN "Supplier1_Link"
+	1    5000 4050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4250 5500 4250
+Wire Wire Line
+	5500 4250 5500 4150
+$Comp
+L GND #PWR02
+U 1 1 592C8DDB
+P 7600 2800
+F 0 "#PWR02" H 7600 2550 50  0001 C CNN
+F 1 "GND" H 7600 2650 50  0000 C CNN
+F 2 "" H 7600 2800 50  0001 C CNN
+F 3 "" H 7600 2800 50  0001 C CNN
+	1    7600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR03
+U 1 1 592C8F6B
+P 3300 3050
+F 0 "#PWR03" H 3300 2800 50  0001 C CNN
+F 1 "GNDA" H 3300 2900 50  0000 C CNN
+F 2 "" H 3300 3050 50  0001 C CNN
+F 3 "" H 3300 3050 50  0001 C CNN
+	1    3300 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2700 5450 2700
+Wire Wire Line
+	4700 2900 4550 2900
+$Comp
+L GND #PWR04
+U 1 1 592C92D4
+P 5450 2900
+F 0 "#PWR04" H 5450 2650 50  0001 C CNN
+F 1 "GND" H 5450 2750 50  0000 C CNN
+F 2 "" H 5450 2900 50  0001 C CNN
+F 3 "" H 5450 2900 50  0001 C CNN
+	1    5450 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5300 2900 5450 2900
+Wire Wire Line
+	3250 2900 4050 2900
+Wire Wire Line
+	5750 2700 5900 2700
+$Comp
+L CONN_01X02 J2
+U 1 1 592C9797
+P 5000 2200
+F 0 "J2" H 5000 2350 50  0000 C CNN
+F 1 "CONN_01X02" V 5100 2200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5000 2200 50  0001 C CNN
+F 3 "" H 5000 2200 50  0001 C CNN
+	1    5000 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 2400 5050 2400
+Wire Wire Line
+	4950 2400 4550 2400
+Wire Wire Line
+	4550 2400 4550 2700
+Connection ~ 4550 2700
+$Comp
+L Transformer_1P_1S_SO8 T2
+U 1 1 592C9D7D
+P 5000 4900
+F 0 "T2" H 5000 5150 50  0000 C CNN
+F 1 "LM-NP-1001-B1L" H 5000 4600 50  0000 C CNN
+F 2 "BournesTransformer:LM-LP-1001L" H 5000 4900 50  0001 C CNN
+F 3 "" H 5000 4900 50  0001 C CNN
+F 4 "Bourns" H 5000 4900 60  0001 C CNN "MFR"
+F 5 "LM-NP-1001-B1L" H 5000 4900 60  0001 C CNN "MFRPN"
+F 6 "Mouser" H 5000 4900 60  0001 C CNN "Supplier1"
+F 7 "652-LM-NP-1001-B1L" H 5000 4900 60  0001 C CNN "Supplier1_PN"
+F 8 "http://www.mouser.com/ProductDetail/Bourns/LM-NP-1001-B1L/?qs=sGAEpiMZZMv0IfuNuy2LUf9TOZZJ2UPZu6zAveLP08Q%3d" H 5000 4900 60  0001 C CNN "Supplier1_Link"
+	1    5000 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6000 4800 5500 4800
+Wire Wire Line
+	5500 4800 5500 4700
+Wire Wire Line
+	5500 4700 5300 4700
+Text GLabel 4500 4700 0    60   Input ~ 0
+TX_AUDIO+
+Wire Wire Line
+	4500 4700 4700 4700
+Text GLabel 4550 2400 0    60   Input ~ 0
+TX_AUDIO-
+Text GLabel 4500 5100 0    60   Input ~ 0
+TX_AUDIO-
+Wire Wire Line
+	4500 5100 4700 5100
+$Comp
+L LTV-817 U1
+U 1 1 592CA355
+P 5000 2800
+F 0 "U1" H 4800 3000 50  0000 L CNN
+F 1 "LTV-817" H 5000 3000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W7.62mm" H 4800 2600 50  0001 L CIN
+F 3 "" H 5000 2700 50  0001 L CNN
+F 4 "Lite-On" H 5000 2800 60  0001 C CNN "MFR"
+F 5 "LTV-817" H 5000 2800 60  0001 C CNN "MFRPN"
+F 6 "Mouser" H 5000 2800 60  0001 C CNN "Supplier1"
+F 7 "859-LTV-817" H 5000 2800 60  0001 C CNN "Supplier1_PN"
+F 8 "http://www.mouser.com/ProductDetail/Lite-On/LTV-817/?qs=sGAEpiMZZMteimceiIVCBx3Y662pemTNKPq06ZE4UHA%3d" H 5000 2800 60  0001 C CNN "Supplier1_Link"
+	1    5000 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR05
+U 1 1 592CAB65
+P 4500 4250
+F 0 "#PWR05" H 4500 4000 50  0001 C CNN
+F 1 "GNDA" H 4500 4100 50  0000 C CNN
+F 2 "" H 4500 4250 50  0001 C CNN
+F 3 "" H 4500 4250 50  0001 C CNN
+	1    4500 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4250 4700 4250
+Wire Wire Line
+	5500 3950 6800 3950
+Wire Wire Line
+	6700 3950 6700 4050
+Wire Wire Line
+	5500 3850 5500 3950
+Wire Wire Line
+	5300 3850 5500 3850
+Connection ~ 6700 3950
+$Comp
+L CONN_02X04 J6
+U 1 1 592CBD36
+P 7950 2850
+F 0 "J6" H 7950 3100 50  0000 C CNN
+F 1 "CONN_02X04" H 7950 2600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x04_Pitch2.54mm" H 7950 1650 50  0001 C CNN
+F 3 "" H 7950 1650 50  0001 C CNN
+	1    7950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 592CBF42
+P 8300 3000
+F 0 "#PWR06" H 8300 2750 50  0001 C CNN
+F 1 "GND" H 8300 2850 50  0000 C CNN
+F 2 "" H 8300 3000 50  0001 C CNN
+F 3 "" H 8300 3000 50  0001 C CNN
+	1    8300 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 2700 8200 2700
+Wire Wire Line
+	8300 2800 8200 2800
+Wire Wire Line
+	8300 2900 8200 2900
+Wire Wire Line
+	8300 3000 8200 3000
+Wire Wire Line
+	3250 2500 3300 2500
+$Comp
+L GNDA #PWR07
+U 1 1 592CC79E
+P 4550 2900
+F 0 "#PWR07" H 4550 2650 50  0001 C CNN
+F 1 "GNDA" H 4550 2750 50  0000 C CNN
+F 2 "" H 4550 2900 50  0001 C CNN
+F 3 "" H 4550 2900 50  0001 C CNN
+	1    4550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J7
+U 1 1 592CCE65
+P 5000 3200
+F 0 "J7" H 5000 3350 50  0000 C CNN
+F 1 "CONN_01X02" V 5100 3200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5000 3200 50  0001 C CNN
+F 3 "" H 5000 3200 50  0001 C CNN
+	1    5000 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 3400 5200 3400
+Wire Wire Line
+	4950 3400 4050 3400
+Wire Wire Line
+	4050 3400 4050 2900
+$EndSCHEMATC
